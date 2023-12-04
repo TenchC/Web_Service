@@ -1,10 +1,15 @@
 //import express library
 import express from "express";
+import cors from 'cors';
 
 //create a new express application
 const app = express();
 
 app.use(express.json());
+
+app.use(cors({
+  origin: '*'
+}));
 
 //at this port
 const port = process.env.PORT || 3001;
